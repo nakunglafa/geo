@@ -1,0 +1,24 @@
+
+total-activity{{ totalActivities }}
+totalDistance: {{totalDistance }}
+firstdata: {{ firstDate  | date:'longDate' }}
+
+<table>
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>comments</td>
+      <td>date</td>
+      <td>distance</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let activity of activities">  
+      <td> {{activity.name}}</td>
+      <td> {{activity.comments}}</td>
+      <td> {{activity.date | date:"dd/mm/yyyy"}}</td>
+      <td> {{activity.distance}}</td>
+    </tr>
+  </tbody>
+</table>
+
